@@ -1,0 +1,75 @@
+
+.carousel-inner {
+    height: 350px;
+}
+
+.topContainer {
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 25px 5px rgba(179,179,179,1);
+    -moz-box-shadow: 0px 0px 25px 5px rgba(179,179,179,1);
+    box-shadow: 0px 0px 25px 5px rgba(179,179,179,1);
+    
+    margin-top: -150px;
+    z-index: 10000;
+    position: relative;
+}
+
+.row > h1 {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.row > .rowTextGray{
+    width: 100%;
+    color: gray;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+
+.separatorHeader {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+
+.col-md {
+    padding-right: 50px;
+    padding-left: 50px;
+
+}
+
+.red {
+    color: red;
+}
+
+
+.myFont {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.frmText, .frmPassword, .frmButton {
+    border-radius: 4px;
+    font-weight: bold;
+    color: red;
+}
+
+#content{
+    display: block;
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+    overflow: hidden;
+}
+
+
+#weather .card-text span {
+    display: block;
+    width: 75px;
+    font-weight: bold;
+}

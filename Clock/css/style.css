@@ -1,0 +1,9 @@
+body{
+    background-color: #091921;
+}
+
+.clock {
+    background-image: url("../img/clock.png");
+    width: 400px;
+    height: 400px;
+}
