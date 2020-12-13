@@ -1,8 +1,12 @@
 
 const serverExpress = require('express'); // expressjs
+const bodyParser = require('body-parser');
+const { response } = require('express');
 
 const app = serverExpress();
 const port = 3001; 
+
+app.use(bodyParser.urlencoded({extended:true}));
 
 let books = [
     {
@@ -75,3 +79,62 @@ app.delete('/book/:isbn', (request, response) => {
 if (result == false) response.status(404).send("this book is not found");
 
 });
+
+app.post('/book/new' , (request, response) => {
+
+
+    console.log(request.body)
+    
+
+let book = {
+    isbn: request.body.isbn,
+    title: request.body.title,
+    author: request.body.publish_year,
+    publish_year: request.body.numOfPages
+
+}
+
+
+
+books.push (book);
+
+let result = 'new book succeffully saved!';
+console.log (result);
+response.status (200).send(result);
+
+ });
+
+app.post('/book/new' , (request, response) => {
+
+
+    console.log(request.body)
+    //response.send('hello from hell!');
+
+
+});
+
+
+app.post('/book/edit', (request, response) => {
+
+  
+    let result = false;
+    
+    books.forEach((book,index ) => {
+    
+
+    if (book.isbn == request.body.isbn)
+    {
+        books[index].isbn = request.body.isbn;
+        books[index].title = request.body.isbn;
+        books[index].author = request.body.author;
+        books[index].publish_year = request.body.publish_year;
+        books[index].numOfpages = request.body.numOfPages;
+
+
+        response.status(200).send("book is deleted successfuly");
+       
+       result = true;
+    }
+ })
+
+})
